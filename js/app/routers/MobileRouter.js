@@ -142,9 +142,9 @@ define(["jquery", "backbone", "models/Profile", "models/System", "views/View", "
 				// new Videosdetailsview({id:id});
 				this.changePage(Cardstartview, {cardid:cardid,page:page});
             },
-            CardEditViewRouter: function(cardid,pageid) {
+            CardEditViewRouter: function(cardsetid,pageid) {
 				// new Videosdetailsview({id:id});
-				this.changePage(CardEditView, {cardid:cardid,pageid:pageid});
+				this.changePage(CardEditView, {cardsetid:cardsetid,pageid:pageid});
             },
             videodetailsview: function(id) {
 				// new Videosdetailsview({id:id});
@@ -256,7 +256,7 @@ define(["jquery", "backbone", "models/Profile", "models/System", "views/View", "
 				$('#pageFooter').html('');
 				$('#body').css('overflow','hidden !mportant');
 				
-
+				window.getOwnerData();
 				
 				// this.myView.$el.off('create', this.testFunction);
 				// this.myView.$el.on('create', this.testFunction);
